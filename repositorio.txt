@@ -1,0 +1,9 @@
+echo "# Trabajos-unidad-1-Alejandra_" >> README.md
+git init
+git add .
+git commit -m "practica9 alejandra"
+git branch -M main
+git remote add origin https://github.com/alejandramendoza280308-png/Trabajos-unidad-1-Alejandra-.git
+git push -u origin main
+git config --global user.email "alejandramendoza280308@gmail.com"
+git config --global user.name "alejandramendoza280308-png"
