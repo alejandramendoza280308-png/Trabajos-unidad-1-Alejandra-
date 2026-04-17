@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para MY LOVE</title>
+    <style>
+        body {
+            background-color: #30acf3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            color: #f1e318;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .flores-header img {
+            width: 150px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 { font-size: 2.5rem; color: #37d4a0; }
+
+        #contador {
+            font-size: 1.5rem;
+            background: #fdf2b3;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px dashed #d4af37;
+        }
+
+        .mensaje-perron {
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="flores-header">
+            <img src="corazones.jpg.jpeg" alt="corazones">
+            <img src="destellos.jpg.jpeg" alt="destellos" style="width: 80px;">
+        </div>
+
+        <h1>Mi amor por ti es eterno</h1>
+
+        <div id="contador">
+            Cargando tiempo...
+        </div>
+
+        <div class="mensaje-perron">
+            <p>
+                Hola pequeño yose, tiene demasiado que no te hago algo asi... quiero que sepas que te amo demasiado, incluso mas que antes, si me sigues gustastando y mas que antes, amo tenerte conmigo, amo y me gusta tanto sentirte serca, me encanta estar acostada contigo en tu pecho.... hay momentos que no estamos nada bien y quizas sea seguido ya, quisiera que todo fuera igual de bonito que antes, que haya mas tiempo juntos, mas salidas, mas momentos diferentes, mas cosas juntos... 
+            </p>
+        </div>
+
+        <div class="flores-footer">
+            <img src="corazones.jpg.jpeg" alt="corazones" style="width: 120px;">
+        </div>
+    </div>
+
+    <script>
+        // PON AQUÍ LA FECHA EN QUE EMPEZARON (Año, Mes - 1, Día)
+        // Ejemplo: 25 de diciembre de 2023 sería: new Date(2023, 12, 25)
+        const fechaInicio = new Date(2023, 12, 25); 
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = ahora - fechaInicio;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diferencia / 1000 / 60) % 60);
+            const segundos = Math.floor((diferencia / 1000) % 60);
+
+            document.getElementById('contador').innerHTML = 
+                `Llevamos Latiendo:<br> 
+                <b>${dias}</b> días, <b>${minutos}</b> minutos y <b>${segundos}</b> segundos`;
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+    </script>
+</body>
+</html>

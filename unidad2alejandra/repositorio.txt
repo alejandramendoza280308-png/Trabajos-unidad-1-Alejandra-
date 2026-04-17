@@ -1,0 +1,7 @@
+echo "# Trabajos-unidad2-Alejandra-" >> README.md
+git init
+git add .
+git commit -m "practica1.1alejandra"
+git branch -M main
+git remote add origin https://github.com/alejandramendoza280308-png/Trabajos-unidad2-Alejandra-.git
+git push -u origin main
